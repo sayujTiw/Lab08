@@ -25,4 +25,17 @@ public class CustomListTest {
     public void testHasCityReturnsFalse() {
         assertFalse(list.hasCity(calgary));
     }
+
+    @Test
+    public void testDeleteCityRemovesCity() {
+        list.addCity(calgary);
+        list.deleteCity(calgary);
+        assertFalse(list.hasCity(calgary));
+    }
+
+    @Test
+    public void testDeleteCityNotInList() {
+        list.deleteCity(calgary);
+        assertFalse(list.hasCity(calgary));
+    }
 }
