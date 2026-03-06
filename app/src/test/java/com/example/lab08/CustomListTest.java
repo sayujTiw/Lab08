@@ -1,7 +1,28 @@
 package com.example.lab08;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
+
 public class CustomListTest {
 
+    private CustomList list;
+    private City calgary;
+
+    @BeforeEach
+    public void setUp() {
+        list = new CustomList();
+        calgary = new City("Calgary", "AB");
+    }
+
+    @Test
+    public void testHasCityReturnsTrue() {
+        list.addCity(calgary);
+        assertTrue(list.hasCity(calgary));
+    }
+
+    @Test
+    public void testHasCityReturnsFalse() {
+        assertFalse(list.hasCity(calgary));
+    }
 }
