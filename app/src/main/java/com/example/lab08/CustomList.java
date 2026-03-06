@@ -14,9 +14,7 @@ public class CustomList {
         cities.add(city);
     }
 
-    public int getCount() {
-        return cities.size();
-    }
+    
 
     // Will be implemented later using TDD (leave blank for now)
     // public boolean hasCity(City city) { ... }
